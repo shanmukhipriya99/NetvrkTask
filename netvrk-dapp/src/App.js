@@ -23,8 +23,30 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    web3.eth.getAccounts().then(addr => console.log(addr));
+    web3.eth.getAccounts().then((addr) => console.log(addr));
   }
+
+  swapfromETH = async () => {
+    const accounts = await web3.eth.getAccounts();
+
+    // console.log(tsk, this.state.eth);
+    try {
+      let ethBalance = web3.utils.fromWei(this.state.eth, "ether");
+      this.setState({ tsk: ethBalance / 1 });
+      await tsk.methods.swapFromETH(this.state.eth).send({
+        from: accounts[0],
+        // to: '0xCd4318F7D5bc40037b854f99De13369Ef993b543',
+        value: this.state.eth,
+      });
+      this.setState({ success: true });
+    } catch (e) {
+      // if (this.state.eth === null || isNaN(this.state.eth) === false) {
+      //   this.setState({ success: false });
+      // }
+      this.setState({ success: false });
+      console.log("Error \n" + e);
+    }
+  };
 
   render() {
     let successMessage;
