@@ -1,3 +1,15 @@
+# Output Screenshots
+1. Homepage 
+![image](https://user-images.githubusercontent.com/37501487/148803893-1068d25d-1579-41d5-b419-ceb21049be17.png)
+2. Empty Input
+![image](https://user-images.githubusercontent.com/37501487/148803986-687fd2a9-7f7c-48bd-951b-f9005e20ed5d.png)
+3. Invalid Input
+![image](https://user-images.githubusercontent.com/37501487/148804039-aa6185cc-3704-43b1-aef1-32aa41270993.png)
+4. Successful Input (1000000000000000000)
+![image](https://user-images.githubusercontent.com/37501487/148804095-3f1483b7-86d6-497f-8388-877b2a818912.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
